@@ -9,8 +9,8 @@
 Plugin Name: Custom Fields for REST API
 Description: Enhances Wordpress REST API v2 about metadata
 Author: Integromat
-Author URI: http://www.integromat.com/
-Version: 1.0
+Author URI: https://www.integromat.com/
+Version: 1.1
 */
 
 define('IMAPIE_FIELD_PREFIX', 'integromat_api_field_');

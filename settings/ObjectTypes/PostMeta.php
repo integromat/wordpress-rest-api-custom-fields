@@ -147,8 +147,8 @@ Class PostsMeta extends MetaObject {
 			SELECT
 				p.post_type,
 				m.meta_key
-			FROM wp_postmeta m
-			INNER JOIN wp_posts p ON p.ID = m.post_id
+			FROM ". $wpdb->base_prefix ."postmeta m
+			INNER JOIN ". $wpdb->base_prefix ."posts p ON p.ID = m.post_id
 			ORDER BY 
 				post_type,
 				meta_key			
