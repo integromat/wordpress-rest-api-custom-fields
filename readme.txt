@@ -20,6 +20,9 @@ The metadata enhancement is available only for this wordpress core object types:
 
 == Changelog ==
 
+= 1.1 =
+* Fixed db prefix
+
 = 1.0 =
 * Init version
 
