@@ -2,7 +2,7 @@
 
 /**
  * @package Custom_Fields_For_REST_API
- * @version 1.0
+ * @version 1.1
  */
 
 /*
