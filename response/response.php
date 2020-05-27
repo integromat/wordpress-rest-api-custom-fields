@@ -1,6 +1,5 @@
 <?php defined( 'ABSPATH' ) or die( 'No direct access allowed' );
 
-
 add_action('rest_api_init', function () {
 	$objectTypes = ['post', 'comment', 'user', 'term'];
 
@@ -11,15 +10,16 @@ add_action('rest_api_init', function () {
 			foreach ($objectTypeMetaItems as $metaItemFull => $val) {
 				$metaItem = str_replace(IMAPIE_FIELD_PREFIX, '', $metaItemFull);
 
-				$args = array(
-					'type'         => 'string',
-					'description'  => 'A meta key associated with a string meta value.',
-					'single'       => true,
-					'show_in_rest' => true,
+				register_rest_field(
+					$objectType,
+					$metaItem,
+					[
+						'get_callback' => function ($object, $field_name, $request) use ($objectType) {
+							return get_metadata($objectType, $object['id'], $field_name, true);
+						}
+					]
 				);
-				register_meta($objectType, $metaItem, $args);
 			}
 		}
 	}
 });
-
