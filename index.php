@@ -1,16 +1,16 @@
 <?php defined( 'ABSPATH' ) or die( 'No direct access allowed' );
 
 /**
- * @package Custom_Fields_For_REST_API
- * @version 1.1
+ * @package REST_API_Custom_Fields
+ * @version 1.2
  */
 
 /*
-Plugin Name: Custom Fields for REST API
+Plugin Name: REST API Custom Fields
 Description: Enhances Wordpress REST API v2 about metadata
 Author: Integromat
 Author URI: https://www.integromat.com/
-Version: 1.1
+Version: 1.2
 */
 
 define('IMAPIE_FIELD_PREFIX', 'integromat_api_field_');
